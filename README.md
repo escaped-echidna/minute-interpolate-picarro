@@ -7,6 +7,8 @@ The current process for getting Picarro data into usable format involves collect
 
 The first step is to use the software on the Picarro itself to combine all datasets and convert them to '.dat' format. Then you have to copy the data from '.dat' into csv (I used the matlab gui data viewer to manually copy and paste data). Then run the R script on the data.
 
-#Critical Information
+# Critical Information
 
 It is important to make sure that the time/date field in the csv is in a format which matches the 'data_date_format' variable in the script. 
+
+This performs a minute interpolation, not a running average - the data is not smoothed in any way.
